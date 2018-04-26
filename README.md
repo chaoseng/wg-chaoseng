@@ -19,15 +19,15 @@ We record all [meeting minutes](https://docs.google.com/document/d/19v5c-_dmcgEx
 ## Interested Parties
 
 * Chris Aniszczyk (@caniszczyk), CNCF
-* James Burns (Stitch Fix)
-* Tammy Butow (@), Gremlin
-* Matthew Fornaciari (Gremlin)
-* Arun Gupta (AWS)
-* Sylvain Hellegouarch (ChaosIQ)
-* Michael Kehoe (LinkedIn)
-* Alexei Ledenev (Codefresh)
-* Charles Nwatu (Stitch Fix)
-* Aaron Rinehart (UHG)
-* Casey Rosenthal (Backplane.io)
-* Charles Torre (Microsoft)
-* Bruce Wong (StitchFix)
+* James Burns, Stitch Fix
+* Tammy Butow (@tammybutow), Gremlin
+* Matthew Fornaciari (@mattforni), Gremlin
+* Arun Gupta (@arun-gupta), AWS
+* Sylvain Hellegouarch (@Lawouach), ChaosIQ
+* Michael Kehoe (@michael-kehoe), LinkedIn
+* Alexei Ledenev (@alexei-led), Codefresh
+* Charles Nwatu (@charles_nwatu), Stitch Fix
+* Aaron Rinehart, UHG
+* Casey Rosenthal, Backplane.io
+* Charles Torre, Microsoft
+* Bruce Wong (@brucemwong), StitchFix
