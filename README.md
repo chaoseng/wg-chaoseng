@@ -32,3 +32,4 @@ We record all [meeting minutes](https://docs.google.com/document/d/19v5c-_dmcgEx
 * Charles Torre, Microsoft
 * Bruce Wong (@brucemwong), StitchFix
 * Mikolaj Pawlikowski, Bloomberg
+* Paul Jones (@paulwilljones), Capgemini UK
