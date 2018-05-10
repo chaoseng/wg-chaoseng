@@ -33,3 +33,4 @@ We record all [meeting minutes](https://docs.google.com/document/d/19v5c-_dmcgEx
 * Bruce Wong (@brucemwong), StitchFix
 * Mikolaj Pawlikowski, Bloomberg
 * Paul Jones (@paulwilljones), Capgemini UK
+* Adrian Cockcroft (@adrianco), AWS
