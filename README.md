@@ -21,16 +21,17 @@ We record all [meeting minutes](https://docs.google.com/document/d/19v5c-_dmcgEx
 * Chris Aniszczyk (@caniszczyk), CNCF
 * James Burns, Stitch Fix
 * Tammy Butow (@tammybutow), Gremlin
+* Adrian Cockcroft (@adrianco), AWS
 * Matthew Fornaciari (@mattforni), Gremlin
+* Paul Jones (@paulwilljones), Capgemini UK
 * Arun Gupta (@arun-gupta), AWS
 * Sylvain Hellegouarch (@Lawouach), ChaosIQ
 * Michael Kehoe (@michael-kehoe), LinkedIn
 * Alexei Ledenev (@alexei-led), Codefresh
+* Kiran Mova (@kmova), OpenEBS, Bangalore
 * Charles Nwatu (@charles_nwatu), Stitch Fix
+* Mikolaj Pawlikowski, Bloomberg
 * Aaron Rinehart, UHG
 * Casey Rosenthal, Backplane.io
 * Charles Torre, Microsoft
 * Bruce Wong (@brucemwong), StitchFix
-* Mikolaj Pawlikowski, Bloomberg
-* Paul Jones (@paulwilljones), Capgemini UK
-* Kiran Mova (@kmova), OpenEBS, Bangalore
