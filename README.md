@@ -35,3 +35,4 @@ We record all [meeting minutes](https://docs.google.com/document/d/19v5c-_dmcgEx
 * Casey Rosenthal, Backplane.io
 * Charles Torre, Microsoft
 * Bruce Wong (@brucemwong), StitchFix
+* Michael D'Aniello (@michaeldaniello), Carbon Black
