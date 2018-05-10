@@ -19,9 +19,11 @@ We record all [meeting minutes](https://docs.google.com/document/d/19v5c-_dmcgEx
 ## Interested Parties
 
 * Chris Aniszczyk (@caniszczyk), CNCF
+* Reda Benzair (@BenzairReda), Streamroot.io
 * James Burns, Stitch Fix
 * Tammy Butow (@tammybutow), Gremlin
 * Adrian Cockcroft (@adrianco), AWS
+* Michael D'Aniello (@michaeldaniello), Carbon Black
 * Matthew Fornaciari (@mattforni), Gremlin
 * Paul Jones (@paulwilljones), Capgemini UK
 * Arun Gupta (@arun-gupta), AWS
@@ -35,4 +37,3 @@ We record all [meeting minutes](https://docs.google.com/document/d/19v5c-_dmcgEx
 * Casey Rosenthal, Backplane.io
 * Charles Torre, Microsoft
 * Bruce Wong (@brucemwong), StitchFix
-* Michael D'Aniello (@michaeldaniello), Carbon Black
