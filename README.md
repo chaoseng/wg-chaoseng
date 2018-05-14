@@ -5,7 +5,14 @@ Working Group Proposal: Chaos Engineering
 
 [CNCF Chaos Engineering WG](https://docs.google.com/document/d/1BeeJZIyReCFNLJQrZjwA4KMlUJelxFFEv3IwED16lHE/edit?ts=5ace0eab#heading=h.ephtflhfpd1d)
 
-## Meeting Time
+## Community
+
+* Mailing List: https://groups.google.com/forum/#!forum/chaoseng-wg
+* Slack: #chaosengineering (slack.cncf.io)
+
+## Meeting Time and Calendar
+
+We have a [public calendar](https://calendar.google.com/calendar/embed?src=d6lm2ncdcg67h86hj3h4n59rvc%40group.calendar.google.com&ctz=America%2FChicago) and meet every other week.
 
 * Weekly Call Coordinates: Every 2 Weeks @ 9am PT
 * Zoom: https://zoom.us/j/909610578
