@@ -38,3 +38,4 @@ We record all [meeting minutes](https://docs.google.com/document/d/19v5c-_dmcgEx
 * Charles Torre, Microsoft
 * Bruce Wong (@brucemwong), StitchFix
 * Ryan Dooley (@3rdman)
+* James Rasell (@jrasell)
