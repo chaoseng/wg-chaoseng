@@ -47,3 +47,4 @@ We record all [meeting minutes](https://docs.google.com/document/d/19v5c-_dmcgEx
 * Ryan Dooley (@3rdman)
 * James Rasell (@jrasell)
 * Patrick Auld (@PatrickAuld), PlanGrid
+* Pavlos Ratis (@dastergon)
