@@ -50,3 +50,4 @@ We record all [meeting minutes](https://docs.google.com/document/d/19v5c-_dmcgEx
 * Pavlos Ratis (@dastergon)
 * Long Zhang, KTH Royal Institute of Technology
 * Lorin Hochstein (@lorin), Netflix
+* Ramin Keene (@ramin), Fuzzbox
