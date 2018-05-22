@@ -15,7 +15,7 @@ Working Group Proposal: Chaos Engineering
 We have a [public calendar](https://calendar.google.com/calendar/embed?src=d6lm2ncdcg67h86hj3h4n59rvc%40group.calendar.google.com&ctz=America%2FChicago) and meet every other week.
 
 * Weekly Call Coordinates: Every 2 Weeks @ 8am PT
-* Zoom: https://github.com/chaoseng/wg-chaoseng
+* Zoom: https://zoom.us/my/chaosengineeringwg
 * Phone: +16465588656 or +14086380968 Or Telephone: Dial: +1 646 558 8656 (US Toll) or +1 408 638 0968 (US Toll) +1 855 880 1246 (US Toll Free) +1 877 369 0926 (US Toll Free)
 * Meeting ID: 5293067143 
 
