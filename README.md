@@ -23,6 +23,9 @@ We have a [public calendar](https://calendar.google.com/calendar/embed?src=d6lm2
 
 We record all [meeting minutes](https://docs.google.com/document/d/19v5c-_dmcgExP5JYcn4pyGHNpbZebCDCSLfG1ISS6ic/edit#) and post meetings to youtube.
 
+* [5/22/2018](https://www.youtube.com/watch?v=Wpioqs_L6yE&index=2&list=PLj6h78yzYM2NZyGMI2se03zGcyuUWVRf7)
+* [5/10/2018](https://www.youtube.com/watch?v=WAWDm5oGVTo&list=PLj6h78yzYM2NZyGMI2se03zGcyuUWVRf7)
+
 ## Interested Parties
 
 * Chris Aniszczyk (@caniszczyk), CNCF
