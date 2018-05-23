@@ -53,3 +53,4 @@ We record all [meeting minutes](https://docs.google.com/document/d/19v5c-_dmcgEx
 * Ramin Keene (@ramin), Fuzzbox
 * Matthew Brahms (@matthewbrahms)
 * Julien Bisconti (@veggiemonk), Discovery Networks Sweden
+* João Rosa (@joaoasrosa)
