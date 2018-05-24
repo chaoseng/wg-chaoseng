@@ -58,3 +58,4 @@ We record all [meeting minutes](https://docs.google.com/document/d/19v5c-_dmcgEx
 * Julien Bisconti (@veggiemonk), Discovery Networks Sweden
 * João Rosa (@joaoasrosa)
 * Ali Basiri (@abasiri), Netflix
+* Uma Mukkara (@umamukkara), OpenEBS
