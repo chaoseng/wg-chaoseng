@@ -59,3 +59,4 @@ We record all [meeting minutes](https://docs.google.com/document/d/19v5c-_dmcgEx
 * João Rosa (@joaoasrosa)
 * Ali Basiri (@abasiri), Netflix
 * Uma Mukkara (@umamukkara), OpenEBS
+* Shantanu Deshpande (@iamShantanu101), Xento Systems
