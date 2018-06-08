@@ -56,7 +56,7 @@ We record all [meeting minutes](https://docs.google.com/document/d/19v5c-_dmcgEx
 * Ramin Keene (@ramin), Fuzzbox
 * Matthew Brahms (@matthewbrahms)
 * Julien Bisconti (@veggiemonk), Discovery Networks Sweden
-* João Rosa (@joaoasrosa)
+* João Rosa (@joaoasrosa), Xebia
 * Ali Basiri (@abasiri), Netflix
 * Uma Mukkara (@umamukkara), OpenEBS
 * Shantanu Deshpande (@iamShantanu101), Xento Systems
