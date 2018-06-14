@@ -63,3 +63,5 @@ We record all [meeting minutes](https://docs.google.com/document/d/19v5c-_dmcgEx
 * Shantanu Deshpande (@iamShantanu101), Xento Systems
 * Paul Osman (@paulosman), Under Armour
 * Aditya Purandare (@audip), Under Armour
+* Nils Meder (@nilstgmd), Adobe
+
