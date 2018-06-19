@@ -64,4 +64,4 @@ We record all [meeting minutes](https://docs.google.com/document/d/19v5c-_dmcgEx
 * Paul Osman (@paulosman), Under Armour
 * Aditya Purandare (@audip), Under Armour
 * Nils Meder (@nilstgmd), Adobe
-
+* Siddon Tang (@siddontang), PingCAP
