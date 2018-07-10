@@ -104,6 +104,8 @@ However, here are a few areas where it makes sense to carry chaos engineering ef
 * **Service release impact may not be tested for peripheral aspects of the system:** New release is made of one of the internal services, while its performances do not impact user's responsiveness, we note an increase in our costs due to poor resource management
 * **Testing the engagement process and ensuring employees understand how to respond to pages and where playbook resources are**: in other words, actors should hope to find answers, using chaos engineering experiments, regarding unhappy paths, especially cascading failure modes.
 * **Surfacing unknown/transitive dependencies within a system:** as systems become more complex the dependency graph and how stresses in one part of the system can cause other parts to change can become impossible to know holistically ahead of time.
+* **Testing for service resilience** A service in distributed system must be designed with resilience in mind: be able to gracefully handle and recover from unexpected failures. But without doing real tests, one cannot be sure that a service can recover from failure.
+* **Service Inter-Dependency** in a modern distributed system multiple services may depend on each other and when one service degrades, in terms of performance, responsiveness or availability, it can take whole system down.
 
 ## Practicing Chaos Engineering
 
