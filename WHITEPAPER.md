@@ -106,6 +106,9 @@ However, here are a few areas where it makes sense to carry chaos engineering ef
 * **Surfacing unknown/transitive dependencies within a system:** as systems become more complex the dependency graph and how stresses in one part of the system can cause other parts to change can become impossible to know holistically ahead of time.
 * **Testing for service resilience** A service in distributed system must be designed with resilience in mind: be able to gracefully handle and recover from unexpected failures. But without doing real tests, one cannot be sure that a service can recover from failure.
 * **Service Inter-Dependency** in a modern distributed system multiple services may depend on each other and when one service degrades, in terms of performance, responsiveness or availability, it can take whole system down.
+* **Multi-cloud migration**moving to the cloud or spreading across many cloud 
+  providers is a high-risk process with many unknowns. Being able to stress your
+  system as early as possible can help you figure out what's missing
 
 ## Practicing Chaos Engineering
 
@@ -130,14 +133,35 @@ it is good to check the basics of your system:
 
 * Security: Look at the [OWASP](https://www.owasp.org/index.php/Main_Page))
   project which provides good security approaches for various use-cases
-* ...
+* Logging: Your system needs to leave traces about what it is doing so you
+  can investigate it. Central logging is often a prime idea to make this
+  process much smoother and faster.
+* Monitoring: Your system constantly sends pulses about its current state. Those
+  signals tell you something about how it fares when you capture the right
+  metrics.
+* Automation: Whenever you deal with enough complexity, automation can save your
+  day. It is a wide topic and there are many levels of automation but starting
+  with Continuous Integration is a great starting point. Before moving on to
+  Continuous Delivery, Deployment and perhaps even GitOps.
+* Testing: You want to move fast but with a high degree of confidence. Testing
+  is a must-do practice to achieve it.
+
+Altogether, those have become common practices in building great software
+infrastructure and application. Chaos Engineering teams will strive if
+engineering have already figured out those for themselves. With that said, even
+basic Chaos Engineering experiment can help you get useful information from your
+system and help improving it.
 
 
+#### Do I need to get started in production?
 
+Production is relevant because it is more difficult to overfit the system to
+the purpose of the experiment, rendering the outcome more realistic, even if
+its reading is slightly more involved.
 
-#### Do I need to get started in production
-
-While we may want this, starting in prod may not fit "getting started scenarios".
+While we may want this, starting in prod may not fit "getting started scenarios",
+and it is therefore, not only fine, but valuable to start your effort in your
+non-production environment until your team gets used to the practice.
 
 #### Communicate with the Organization
 
@@ -151,17 +175,88 @@ The following phases may or may not be useful. I think it would be valuable if w
 
 #### Degrade Network Conditions
 
+Network is one of the greatest complexity, as well as fragility, facet of any
+systems. One often hears that network cannot be trusted.
+
+It is therefore a place of choice for any Chaos Engineer to look for weaknesses.
+The purpose is to gauge how one service copes with poor communication with
+a service it depends on.
+
+Common experiments can therefore:
+
+* add latency to a network call (either on the receive, send or both)
+* add jittering to create noise in the message
+* lose any number of packets along the channel
+* prevent name discovery
+* randomly close connections
+* inject random data into streams
+* send all data to nowhere
+
+Basically, any number of unhappy scenarios you can think of during a network
+exchange is a candidate.
+
 #### Vary Computing Resources
+
+Resources allocated to a service should not be trusted to always be available.
+Whether it's fighting for computing resources or attached devices going away,
+it is critical that you harness the impact of any of those situations on your
+system.
+
+* Reduce the available amount of CPU or memory to a service
+* Detach a device
 
 #### Stress to the Limits
 
-#### Simulate Data Loss
+You may have designed your system to scale and handle a certain level of stress.
+You may even have proven it in specific conditions through performance testing.
+However, those types of testing don't usually take the chance of looking at the
+system dealing with such stress while also enduring degraded conditions (such
+as poor network or lost device) when often, failures pile up because of those
+high loads in the first place.
+
+#### Simulate Data Loss and its Recovery
+
+Data loss is one of the most critical failure any service can face. Its response
+often goes beyond engineering boundaries. Understanding the impacts of data loss
+is therefore highly valuable to a Chaos Engineer.
+
+Smulating data loss often depends on the model, architecture and storage of the
+system so it experimenting for it will take different shapes.
+
+* Remove storage
+* Change permissions so a service cannot read or write
+* Drop messages from a queue to prevent eventual consistency
+* Duplicate messages and deal with integrity
+* Perform a backup
 
 #### Change ACLs Permissions
 
+Never understimate the impacts of an error in a configuration somewhere that
+changes the ACL of a service towards another service.
+
 #### Provoke a Security Breach
 
+While security is its own topic, Chaos Engineers must not set aside but,
+on the contrary, bring security experiments into the fore.
+
+Things to look for:
+
+* Simulate an expired certificate
+* Broken authentication
+* Various common injections (SQL...)
+* Loading from unsafe sources of data
+
+What a Chaos Engineer may be interested in looking for is how the system
+copes with the dire situation, starting with whether the system detected the
+attack in the first place.
+
 #### Assume application fails to restart
+
+How to handle an application which does not restart? If it's a new version, is
+it incompatible with the rest of the system? Can you roll it back?
+
+If it's an existing application, do you have a space issue on the disk? A change
+of permissions on the filesystem?
 
 ### Chaos Engineering Automation
 
