@@ -292,3 +292,17 @@ of permissions on the filesystem?
 * [The Simian Army](https://github.com/Netflix/SimianArmy) - A suite of tools for keeping your cloud operating in top form.
 * [Toxiproxy](https://github.com/Shopify/toxiproxy) - A TCP proxy to simulate network and system conditions for chaos and resiliency testing.
 * [Wiremock](http://wiremock.org/) - API mocking (Service Virtualization) which enables modeling real world faults and delays
+
+
+## Appendix A: Additional Material
+
+- [Principles of Chaos Engineering](http://principlesofchaos.org/)
+
+- [Chaos Engineering: Building Confidence in System Behavior through Experiments](https://www.oreilly.com/webops-perf/free/chaos-engineering.csp)
+
+- [Chaos Engineering: Why Breaking Things Should Be Practised (presentation)](https://www.slideshare.net/hornsby/chaos-engineering-why-breaking-things-should-be-practised-96719638/hornsby/chaos-engineering-why-breaking-things-should-be-practised-96719638)
+
+- [Lineage Driven Fault Injection (pdf)](https://people.ucsc.edu/~palvaro/molly.pdf)  - UC Berkeley
+ 
+- [Automating Failure Testing Research at Internet Scale (pdf)](https://people.ucsc.edu/~palvaro/socc16.pdf)
+
