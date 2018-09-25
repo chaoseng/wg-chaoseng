@@ -23,6 +23,11 @@ We have a [public calendar](https://calendar.google.com/calendar/embed?src=d6lm2
 
 We record all [meeting minutes](https://docs.google.com/document/d/19v5c-_dmcgExP5JYcn4pyGHNpbZebCDCSLfG1ISS6ic/edit#) and post meetings to youtube.
 
+* [9/25/2018](https://docs.google.com/presentation/d/1K4iG-0YcLi3MQlvyP8eC1xd5P4WrXj-EjxqqWU0E5rM/edit#slide=id.g3b0db82382_0_10)
+* [9/11/2018](https://docs.google.com/presentation/d/1WF-MuuuyRRSjuQPhFdxxKWZ29Y1whQNKTq8eq188irc/edit#slide=id.g39e096afa1_0_0)
+* [8/14/2018](https://docs.google.com/presentation/d/14XVs9lHvLpLG-SstaxgmJAvT_nji3yU-3BAFEVo5OD4/edit#slide=id.g39e096afa1_0_0)
+* [7/24/2018](https://docs.google.com/presentation/d/1My1yp2QsBbYIrI9C_FAWG2pf2AEYRVqLpecRA6eQgPY/edit)
+* [7/10/2018](https://docs.google.com/presentation/d/1Nc_VrMJ2PiPGQZS_HsdWizEZp5cuzzeWX2zH81CeHK4/edit#slide=id.g39e096afa1_0_0)
 * [6/12/2018](https://docs.google.com/presentation/d/16USA_wRNdp9Gek9fi8LVD0Q7mbtgsCaBhfXv7o_V0JQ/edit#slide=id.g3b36e1a5fd_7_4)
 * [5/22/2018](https://www.youtube.com/watch?v=Wpioqs_L6yE&index=2&list=PLj6h78yzYM2NZyGMI2se03zGcyuUWVRf7)
 * [5/10/2018](https://www.youtube.com/watch?v=WAWDm5oGVTo&list=PLj6h78yzYM2NZyGMI2se03zGcyuUWVRf7)
