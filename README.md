@@ -61,7 +61,7 @@ We record all [meeting minutes](https://docs.google.com/document/d/19v5c-_dmcgEx
 * Lorin Hochstein (@lorin), Netflix
 * Ramin Keene (@ramin), Fuzzbox
 * Matthew Brahms (@matthewbrahms)
-* Julien Bisconti (@veggiemonk), Discovery Networks Sweden
+* Julien Bisconti (@veggiemonk), 56k.cloud
 * João Rosa (@joaoasrosa), Xebia
 * Ali Basiri (@abasiri), Netflix
 * Uma Mukkara (@umamukkara), OpenEBS
