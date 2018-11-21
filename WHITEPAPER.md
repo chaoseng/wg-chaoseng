@@ -77,7 +77,7 @@ most operational best practices focus upstream, Chaos Engineering looks downstre
 
 Typically, testing happens either in development or a production-lookalike environment but it is seldom performed in production after  the system is in the hands of users. In other words, testing is most often performed in safe conditions whereas Chaos Engineering factors in a certain level of risk.
 
-Chaos Engineering does not take results of an experiment in binary - 
+Chaos Engineering does not take results of an experiment in binary -
 passed|not passed - fashion. Instead, results are meant to be analysed and
 correlated with the system's state and events at the time the experiment
 took place.
@@ -95,14 +95,34 @@ However, here are a few areas where it makes sense to invest in Chaos Engineerin
 * **Network dependant services:** Can we cope with a link failure when the network (internal or otherwise) cannot be trusted?
 * **Service release impact may not be tested for peripheral aspects of the system:** How does a new poorly performing release of one of the internal services impact our system?
 * **Testing the engagement process and ensuring employees understand how to respond to pages and where playbook resources are**: Do the actors know how to react in the case of failures, especially cascading failure modes?
-* **Surfacing unknown/transitive dependencies within a system:** How well do the actors understand the dependencies within the system, especially as complexity increases? 
-* **Testing for service resilience** Are the services in the distributed system resilient and able to gracefully handle (and recover from) unexpected failures? 
+* **Surfacing unknown/transitive dependencies within a system:** How well do the actors understand the dependencies within the system, especially as complexity increases?
+* **Testing for service resilience** Are the services in the distributed system resilient and able to gracefully handle (and recover from) unexpected failures?
 * **Service Inter-Dependency** How well does the system handle a degraded service that other services depend on?
 * **Multi-cloud migration** Has the appropriate stress testing occurred on a distributed system that is moving to the cloud or spreading across many cloud?
 
 ## Practicing Chaos Engineering
 
 ### Getting Started With Chaos Engineering
+
+#### Warning with the word Chaos
+
+"Chaos" can be a scary word because of the ideas associated with it.
+It is important to notice that the word _chaos_ is generic term for "complete disorder".
+Chaos engineering is the discipline to run experiments to expose that chaos, to make it visible.
+In our case, the chaos is in the system already.
+By exposing the inherent chaos of a system, that system is better understood
+and improvements can be made in order to make more it resilience.
+In other words, to make the chaos less affecting the availability of the system.
+
+If you see someone with a syringe and that person says to you: "I'm going to inject you with something it's going to be great".
+Would you trust that person ? Probably not.
+If you see a trained practitioner or a doctor with a syringe,
+that syringe contains a vaccine and the doctor explains to you what is it going to do to your body with the potential benefits of it.
+Would you trust that person ? Probably more than in the previous case.
+
+So it is important to mention the benefits of chaos engineering when talking about it to someone is not familiar with it.
+Talk about the results of the experiments as well as the experiments themselves.
+
 
 #### Is my system ready to endure Chaos Engineering?
 
@@ -141,15 +161,15 @@ system and how to improve it.
 
 #### Do I need to get started in production?
 
-In test environments, it is common to create conditions that best suit the testing scenarios you are running. Chaos Engineering experiments that are run in these environments may produce tailored outcomes rather than real-world reactions to the tests. Running Chaos Engineering experiments in production, therefore, is more useful because you will get a more realistic view into how your system will really react to failure. 
+In test environments, it is common to create conditions that best suit the testing scenarios you are running. Chaos Engineering experiments that are run in these environments may produce tailored outcomes rather than real-world reactions to the tests. Running Chaos Engineering experiments in production, therefore, is more useful because you will get a more realistic view into how your system will really react to failure.
 
-While running in production may be the best approach, most organizations will want to start by running Chaos Engineering experiments in test environments until they are comfortable with the practice. This is completely acceptable but the real value of the experiments comes from running them in production so that should always be the end goal. 
+While running in production may be the best approach, most organizations will want to start by running Chaos Engineering experiments in test environments until they are comfortable with the practice. This is completely acceptable but the real value of the experiments comes from running them in production so that should always be the end goal.
 
 #### Communicate with the Organization
 
 This is where we need to continue the discussion and figure out how far we want/can go with the patterns.
 
-Should we talk gamedays for instance? Observability? 
+Should we talk gamedays for instance? Observability?
 ((comment from Lorinda - I think we should talk about game days, observability, logging/auditing and notifications. Those are all different examples of communication that happen at different stages. But in our experience, teams want the reassurance that communication will occur at key moments in the process and on a continuous basis))
 
 The following phases may or may not be useful. I think it would be valuable if we could describe what it means to deal with chaos in those various cases, but is it the right place?
@@ -285,5 +305,5 @@ of permissions on the filesystem?
 - [Chaos Engineering: Why Breaking Things Should Be Practised (presentation)](https://www.slideshare.net/hornsby/chaos-engineering-why-breaking-things-should-be-practised-96719638/hornsby/chaos-engineering-why-breaking-things-should-be-practised-96719638)
 
 - [Lineage Driven Fault Injection (pdf)](https://people.ucsc.edu/~palvaro/molly.pdf)  - UC Berkeley
- 
+
 - [Automating Failure Testing Research at Internet Scale (pdf)](https://people.ucsc.edu/~palvaro/socc16.pdf)
