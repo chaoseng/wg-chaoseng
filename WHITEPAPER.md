@@ -12,22 +12,22 @@ The Principles of Chaos Engineering describe well the various characteristics of
 
 The definition covers most of the main important aspects of chaos engineering:
 
-* it is a discipline rather than a process. In other words, it leans on the actors capacity to stick to principles and making the right judgment call rather than having to follow prescriptive rules about how they must conduct their effort. The discipline usually emerges from the actors, and their unique needs
-* while this definition is specific about distributed system, where it provides the great benefits, chaos engineering is concerned about any system with enough complexity. It gives the actors a way of navigating this  complexity to learn and improve production is the main target of the effort. While actors could, and likely should, carry chaos engineering effort in their non-production environment, it is best performing it in production where it matters.
+* it is a discipline rather than a process. In other words, it leans on the actors' capacity to stick to principles and make the right judgment call rather than following prescriptive rules about how they must conduct their effort. The discipline usually emerges from the actors, and their unique needs
+* while this definition is specific about distributed systems, where chaos engineering provides great benefits, chaos engineering is concerned about any system with enough complexity. It gives the actors a way of navigating this complexity to learn, with improving production as the main target of the effort. While actors could, and likely should, carry chaos engineering effort into their non-production environment, it is best to perform it in production where it matters.
 
-All of these facets are meant for actors to build confidence in their production system and feel they can become familiar, and responsive, with its dynamic nature.
+All of these facets are meant for actors to build confidence in their production system and feel they can become familiar with, and responsive to, its dynamic nature.
 
 #### Terminology
 
 Throughout this proposal, we will be using some terms that are fairly specific to the chaos engineering discipline:
 
-* **hypothesis**: question actors ask themselves about an aspect of their system's behavior after condition variations, described in terms of a result expressed as a quantity (ie. measurement)
+* **hypothesis**: theory that an actor has about an aspect of their system's behavior after condition variations, described in terms of a result expressed as a quantity (ie. measurement)
 * **experiment**: investigation of the hypothesis through variable measurement and observability of the system's state
-* **instrument(ation)**: associate a particular result with an change in the system’s condition (the method of measurement)
-* **calibration**: identify and refine the amount of uncertainty included in a result.
+* **instrumentation**: association between a particular result with an change in the system’s condition (the method of measurement)
+* **calibration**: identification and refinement of the amount of uncertainty included in a result.
 * **observability**: capability of a system to be considered from different angles while it is being used
 
-## Why practicing Chaos Engineering
+## Why practice Chaos Engineering
 
 ### Harness and Improve System Reliability
 
@@ -35,14 +35,11 @@ Chaos Engineering as a practice lends itself to exploring facets of a system's
 reliability such as its resilience, scalability, security, safety or
 privacy.
 
-All these dimensions of a system have a direct impact on end-users' perception.
-Experimenting degraded conditions may leave lasting negative opinion of the
-service a system renders. In the worst case scenario, poor conditions may
-lead to legal issues.
+All these dimensions of a system have a direct impact on end-users' perception. All systems experience unplanned events that cause degradation of performance. Experiencing degraded conditions may leave a lasting negative opinion of the
+service a system renders. In the worst case scenario, poor conditions may lead to legal issues for the service provider.
 
-In effect, Chaos Engineering is a unique practice to enable an organization-wide
-budget for harnessing and improving the system reliability for a delightful
-user experience.
+In effect, Chaos Engineering is a unique practice to enable an organization
+to harness and improve system reliability proactively and in a controlled manner, rather than respond to unplanned events under pressure.
 
 ### Benefits for Cloud Native Systems
 
@@ -51,9 +48,9 @@ nature, provide the platform for strong system reliability.
 
 Properties of Cloud Native Systems that benefit Chaos Engineering:
 
-* **dynamic**: resources and services come and go and cannot be trusted to remain for any specific amount of time
-* **promote isolation of concerns**: outcomes of a well-focused chaos experiment should be easier to make sense of
-* **automation**: being API driven makes them great candidate for experimental automation needs
+* **dynamic**: resources and services are designed to come and go, and cannot be trusted to remain for any specific amount of time
+* **isolation of concerns**: outcomes of a well-focused chaos experiment should be easier to make sense of in a cloud environment
+* **automation**: being API-driven makes them a great candidate for experimental automation needs
 * **value observability**: cloud native systems expose mechanisms for an operator to observe the live system's behavior, which is an inherent expectation of a well-crafted chaos experiment
 
 
@@ -66,8 +63,7 @@ allowing both to adapt and improve accordingly.
 With that said, while Cloud Native Systems abstract large chunks of complexity
 away from users, this complexity does not disappear altogether.
 It is merely made simpler to deal with. Operators, and developers alike,
-must keep a level of familiarity and understanding of the stack they rely on
-in order to offer relevant responses in face of adversarial conditions.
+must understand the stack they rely on to offer relevant responses in face of adversarial conditions.
 
 In a nutshell, Chaos Engineering reminds the actors that the underlying system,
 for all its benefits, cannot be trusted nor become a black box.
@@ -76,14 +72,10 @@ Actors must remain active, and even proactive, in the lifecycle of their system.
 
 ### Software and Operational Practices In Production
 
-Chaos Engineering is a new practice in the toolbox of product teams, but whereas,
-most best practices focus upstream, Chaos Engineering does take a look at
-downstream, once the system is live, ideally in production.
+Chaos Engineering is a new practice in the toolbox of product teams. While
+most operational best practices focus upstream, Chaos Engineering looks downstream to production once the system is live.
 
-Practices such as testing happen either in development environment or
-production lookalike but seldom performed once the system is in the hands of
-users. In other words, testing is most often performed in static or controlled
-conditions whereas Chaos Engineering factors in a certain level of serendipity.
+Typically, testing happens either in development or a production-lookalike environment but it is seldom performed in production after  the system is in the hands of users. In other words, testing is most often performed in safe conditions whereas Chaos Engineering factors in a certain level of risk.
 
 Chaos Engineering does not take results of an experiment in binary - 
 passed|not passed - fashion. Instead, results are meant to be analysed and
@@ -95,20 +87,18 @@ well-defined policies such as automation or reporting.
 
 ### Use Cases
 
-So, what are the use cases for chaos engineering? As stated in the overview, there is no single golden rule applied across the board.
+So, what are the use cases for Chaos Engineering? As stated in the overview, there is no single golden rule that can be applied across the board.
 
-However, here are a few areas where it makes sense to carry chaos engineering efforts:
+However, here are a few areas where it makes sense to invest in Chaos Engineering:
 
-* **Dependency on third-party providers ****out of actor's**** control**: what is the effect of using provider X, when that provider goes down?
-* **Network dependant services:** Network cannot be trusted, even internal networking, can we cope with a link failure?
-* **Service release impact may not be tested for peripheral aspects of the system:** New release is made of one of the internal services, while its performances do not impact user's responsiveness, we note an increase in our costs due to poor resource management
-* **Testing the engagement process and ensuring employees understand how to respond to pages and where playbook resources are**: in other words, actors should hope to find answers, using chaos engineering experiments, regarding unhappy paths, especially cascading failure modes.
-* **Surfacing unknown/transitive dependencies within a system:** as systems become more complex the dependency graph and how stresses in one part of the system can cause other parts to change can become impossible to know holistically ahead of time.
-* **Testing for service resilience** A service in distributed system must be designed with resilience in mind: be able to gracefully handle and recover from unexpected failures. But without doing real tests, one cannot be sure that a service can recover from failure.
-* **Service Inter-Dependency** in a modern distributed system multiple services may depend on each other and when one service degrades, in terms of performance, responsiveness or availability, it can take whole system down.
-* **Multi-cloud migration**moving to the cloud or spreading across many cloud 
-  providers is a high-risk process with many unknowns. Being able to stress your
-  system as early as possible can help you figure out what's missing
+* **Dependency on third-party providers that are ****out of actors'**** control**: what is the effect of using provider X, when that provider goes down?
+* **Network dependant services:** Can we cope with a link failure when the network (internal or otherwise) cannot be trusted?
+* **Service release impact may not be tested for peripheral aspects of the system:** How does a new poorly performing release of one of the internal services impact our system?
+* **Testing the engagement process and ensuring employees understand how to respond to pages and where playbook resources are**: Do the actors know how to react in the case of failures, especially cascading failure modes?
+* **Surfacing unknown/transitive dependencies within a system:** How well do the actors understand the dependencies within the system, especially as complexity increases? 
+* **Testing for service resilience** Are the services in the distributed system resilient and able to gracefully handle (and recover from) unexpected failures? 
+* **Service Inter-Dependency** How well does the system handle a degraded service that other services depend on?
+* **Multi-cloud migration** Has the appropriate stress testing occurred on a distributed system that is moving to the cloud or spreading across many cloud?
 
 ## Practicing Chaos Engineering
 
@@ -118,56 +108,49 @@ However, here are a few areas where it makes sense to carry chaos engineering ef
 
 Chaos Engineering is a fairly disruptive practice as it takes the position
 that, by forcing the system away from its natural position, we can learn subtle
-aspects of the system's behaviors other practices wouldn't unearth.
+aspects of the system's behaviors that other testing practices wouldn't unearth.
 
-To achieve useful learnings however, the system need to be in a fairly reliable
-conditions already. Should the system be too fragile, either the learnings
-would be trivial or with high level of false positives.
-
-The difficulty from trivial results is that the cost of setting up a Chaos
-Engineering experiment may be high versus the quality of the learning.
+To achieve useful learnings however, the system needs to be in a fairly reliable and predictable
+state already. If the system is too fragile or its reactions to failures are completely unknown, either the learnings
+would be trivial or would provide a high volume of false positives. The cost of running Chaos Engineering experiments under those conditions would be higher than traditional tests and would not provide more benefit than those tests. To maximize the Return On Investment for Chaos Engineering, it's important to begin with an understanding of your current steady state.
 
 As we suggested, Chaos Engineering supports exploring the reliability of a
 system. While being authoritative is a challenge this whitepaper will not take,
 it is good to check the basics of your system:
 
 * Security: Look at the [OWASP](https://www.owasp.org/index.php/Main_Page))
-  project which provides good security approaches for various use-cases
+  project which provides good security approaches for various use cases.
 * Logging: Your system needs to leave traces about what it is doing so you
-  can investigate it. Central logging is often a prime idea to make this
+  can investigate it. Central logging is often a requirement to make this
   process much smoother and faster.
 * Monitoring: Your system constantly sends pulses about its current state. Those
   signals tell you something about how it fares when you capture the right
   metrics.
 * Automation: Whenever you deal with enough complexity, automation can save your
-  day. It is a wide topic and there are many levels of automation but starting
-  with Continuous Integration is a great starting point. Before moving on to
+  day. There are many levels of automation but Continuous Integration is a great starting point. Tackle this before moving on to
   Continuous Delivery, Deployment and perhaps even GitOps.
 * Testing: You want to move fast but with a high degree of confidence. Testing
-  is a must-do practice to achieve it.
+  is a must-do practice to achieve this confidence and develop meaning hypotheses.
 
 Altogether, those have become common practices in building great software
-infrastructure and application. Chaos Engineering teams will strive if
+infrastructure and applications. Chaos Engineering teams will thrive if
 engineering have already figured out those for themselves. With that said, even
-basic Chaos Engineering experiment can help you get useful information from your
-system and help improving it.
+basic Chaos Engineering experiments can help you get useful information from your
+system and how to improve it.
 
 
 #### Do I need to get started in production?
 
-Production is relevant because it is more difficult to overfit the system to
-the purpose of the experiment, rendering the outcome more realistic, even if
-its reading is slightly more involved.
+In test environments, it is common to create conditions that best suit the testing scenarios you are running. Chaos Engineering experiments that are run in these environments may produce tailored outcomes rather than real-world reactions to the tests. Running Chaos Engineering experiments in production, therefore, is more useful because you will get a more realistic view into how your system will really react to failure. 
 
-While we may want this, starting in prod may not fit "getting started scenarios",
-and it is therefore, not only fine, but valuable to start your effort in your
-non-production environment until your team gets used to the practice.
+While running in production may be the best approach, most organizations will want to start by running Chaos Engineering experiments in test environments until they are comfortable with the practice. This is completely acceptable but the real value of the experiments comes from running them in production so that should always be the end goal. 
 
 #### Communicate with the Organization
 
 This is where we need to continue the discussion and figure out how far we want/can go with the patterns.
 
-Should we talk gamedays for instance? Observability?
+Should we talk gamedays for instance? Observability? 
+((comment from Lorinda - I think we should talk about game days, observability, logging/auditing and notifications. Those are all different examples of communication that happen at different stages. But in our experience, teams want the reassurance that communication will occur at key moments in the process and on a continuous basis))
 
 The following phases may or may not be useful. I think it would be valuable if we could describe what it means to deal with chaos in those various cases, but is it the right place?
 
@@ -304,4 +287,3 @@ of permissions on the filesystem?
 - [Lineage Driven Fault Injection (pdf)](https://people.ucsc.edu/~palvaro/molly.pdf)  - UC Berkeley
  
 - [Automating Failure Testing Research at Internet Scale (pdf)](https://people.ucsc.edu/~palvaro/socc16.pdf)
-
