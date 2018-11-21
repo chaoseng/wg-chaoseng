@@ -26,6 +26,8 @@ Throughout this proposal, we will be using some terms that are fairly specific t
 * **instrumentation**: association between a particular result with an change in the system’s condition (the method of measurement)
 * **calibration**: identification and refinement of the amount of uncertainty included in a result.
 * **observability**: capability of a system to be considered from different angles while it is being used
+* **blast radius**: the impact on the system from the experiment.
+* **game day**: an exercise where the organization (technology, people and processes) are put under stress to learn and improve resilience.
 
 ## Why practice Chaos Engineering
 
