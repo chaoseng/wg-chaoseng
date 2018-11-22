@@ -275,6 +275,8 @@ of permissions on the filesystem?
 
 ## Appendix A: Additional Material
 
+- [Chaos Engineering - Companies, people, tools & practice](https://coggle.it/diagram/WiKceGDAwgABrmyv/t/chaos-engineering-companies%2C-people%2C-tools-practices/0a2d4968c94723e48e1256e67df51d0f4217027143924b23517832f53c536e62) (Graph)
+
 - [Principles of Chaos Engineering](http://principlesofchaos.org/)
 
 - [Chaos Engineering: Building Confidence in System Behavior through Experiments](https://www.oreilly.com/webops-perf/free/chaos-engineering.csp)
