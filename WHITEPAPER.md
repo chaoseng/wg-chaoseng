@@ -4,8 +4,6 @@
 
 *Chaos Engineering is the discipline of experimenting on a distributed system in order to build confidence in the system’s capability to withstand turbulent conditions in production.* - [Principles of Chaos Engineering](http://principlesofchaos.org/)
 
-### Short History
-
 ### Principles
 
 The Principles of Chaos Engineering describe well the various characteristics of the discipline.
@@ -53,7 +51,6 @@ Properties of Cloud Native Systems that benefit Chaos Engineering:
 * **automation**: being API-driven makes them a great candidate for experimental automation needs
 * **value observability**: cloud native systems expose mechanisms for an operator to observe the live system's behavior, which is an inherent expectation of a well-crafted chaos experiment
 
-
 Through these properties, Chaos Engineering experiments can be
 designed, implemented and automated to provide continuous auditing of the
 impact of degraded conditions in the system. This feedback loop provides
@@ -92,7 +89,7 @@ So, what are the use cases for Chaos Engineering? As stated in the overview, the
 However, here are a few areas where it makes sense to invest in Chaos Engineering:
 
 * **Dependency on third-party providers that are ****out of actors'**** control**: what is the effect of using provider X, when that provider goes down?
-* **Network dependant services:** Can we cope with a link failure when the network (internal or otherwise) cannot be trusted?
+* **Network dependent services:** Can we cope with a link failure when the network (internal or otherwise) cannot be trusted?
 * **Service release impact may not be tested for peripheral aspects of the system:** How does a new poorly performing release of one of the internal services impact our system?
 * **Testing the engagement process and ensuring employees understand how to respond to pages and where playbook resources are**: Do the actors know how to react in the case of failures, especially cascading failure modes?
 * **Surfacing unknown/transitive dependencies within a system:** How well do the actors understand the dependencies within the system, especially as complexity increases?
@@ -123,8 +120,7 @@ Would you trust that person ? Probably more than in the previous case.
 So it is important to mention the benefits of chaos engineering when talking about it to someone is not familiar with it.
 Talk about the results of the experiments as well as the experiments themselves.
 
-
-#### Is my system ready to endure Chaos Engineering?
+#### System requirements to endure Chaos Engineering
 
 Chaos Engineering is a fairly disruptive practice as it takes the position
 that, by forcing the system away from its natural position, we can learn subtle
@@ -151,6 +147,7 @@ it is good to check the basics of your system:
   Continuous Delivery, Deployment and perhaps even GitOps.
 * Testing: You want to move fast but with a high degree of confidence. Testing
   is a must-do practice to achieve this confidence and develop meaning hypotheses.
+* Alerting: The persons to be notified when a system behaves abnormally. An experiment can consist of testing those alerts are triggered.
 
 Altogether, those have become common practices in building great software
 infrastructure and applications. Chaos Engineering teams will thrive if
@@ -158,8 +155,7 @@ engineering have already figured out those for themselves. With that said, even
 basic Chaos Engineering experiments can help you get useful information from your
 system and how to improve it.
 
-
-#### Do I need to get started in production?
+#### Chaos Engineering in production
 
 In test environments, it is common to create conditions that best suit the testing scenarios you are running. Chaos Engineering experiments that are run in these environments may produce tailored outcomes rather than real-world reactions to the tests. Running Chaos Engineering experiments in production, therefore, is more useful because you will get a more realistic view into how your system will really react to failure.
 
@@ -169,7 +165,7 @@ While running in production may be the best approach, most organizations will wa
 
 This is where we need to continue the discussion and figure out how far we want/can go with the patterns.
 
-Should we talk gamedays for instance? Observability?
+Should we talk game days for instance? Observability?
 ((comment from Lorinda - I think we should talk about game days, observability, logging/auditing and notifications. Those are all different examples of communication that happen at different stages. But in our experience, teams want the reassurance that communication will occur at key moments in the process and on a continuous basis))
 
 The following phases may or may not be useful. I think it would be valuable if we could describe what it means to deal with chaos in those various cases, but is it the right place?
@@ -223,7 +219,7 @@ Data loss is one of the most critical failure any service can face. Its response
 often goes beyond engineering boundaries. Understanding the impacts of data loss
 is therefore highly valuable to a Chaos Engineer.
 
-Smulating data loss often depends on the model, architecture and storage of the
+Simulating data loss often depends on the model, architecture and storage of the
 system so it experimenting for it will take different shapes.
 
 * Remove storage
@@ -234,7 +230,7 @@ system so it experimenting for it will take different shapes.
 
 #### Change ACLs Permissions
 
-Never understimate the impacts of an error in a configuration somewhere that
+Never underestimate the impacts of an error in a configuration somewhere that
 changes the ACL of a service towards another service.
 
 #### Provoke a Security Breach
@@ -263,7 +259,7 @@ of permissions on the filesystem?
 
 ### Chaos Engineering Automation
 
-#### Continous Chaos Engineering
+#### Continuous Chaos Engineering
 
 ### Chaos Engineering Reporting
 
@@ -282,11 +278,11 @@ of permissions on the filesystem?
 * [Chaos Toolkit](https://github.com/chaostoolkit/chaostoolkit) - A chaos engineering toolkit to help you build confidence in your software system.
 * [chaos-lambda](https://github.com/bbc/chaos-lambda) - Randomly terminate ASG instances during business hours.
 * [ChaoSlingr](https://github.com/Optum/ChaoSlingr) - Introducing Security Chaos Engineering. ChaoSlingr focuses primarily on the experimentation on AWS Infrastructure to proactively instrument system security failure through experimentation.
-* [drax](https://github.com/dcos-labs/drax) - DC/OS Resilience Automated Xenodiagnosis tool. It helps to test DC/OS deployments by applying a Chaos Monkey-inspired, proactive and invasive testing approach.
+* [Drax](https://github.com/dcos-labs/drax) - DC/OS Resilience Automated Xenodiagnosis tool. It helps to test DC/OS deployments by applying a Chaos Monkey-inspired, proactive and invasive testing approach.
 * [Gremlin](https://www.gremlininc.com/)- Chaos-as-a-Service - Gremlin is a platform that offers everything you need to do Chaos Engineering. Supports all cloud infrastructure providers, Kubernetes, Docker and host-level chaos engineering. Offers an API and control plane.
-* [https://github.com/guardicore/monkey](https://github.com/guardicore/monkey): The Infection Monkey is an open source security tool for testing a data center's resiliency to perimeter breaches and internal server infection. The Monkey uses various methods to self propagate across a data center and reports success to a centralized Monkey Island server.
 * [Litmus](https://github.com/openebs/litmus) -  An open source framework for chaos engine based qualification of Kubernetes environments
 * [MockLab](http://get.mocklab.io/) - API mocking (Service Virtualization) as a service which enables modeling real world faults and delays.
+* [Monkey](https://github.com/guardicore/monkey): The Infection Monkey is an open source security tool for testing a data center's resiliency to perimeter breaches and internal server infection. The Monkey uses various methods to self propagate across a data center and reports success to a centralized Monkey Island server.
 * [Muxy](https://github.com/mefellows/muxy/) - A chaos testing tool for simulating a real-world distributed system failures.
 * [Namazu](https://github.com/osrg/namazu) - Programmable fuzzy scheduler for testing distributed systems.
 * [Pod-Reaper](https://github.com/target/pod-reaper) - A rules based pod killing container. Pod-Reaper was designed to kill pods that meet specific conditions that can be used for Chaos testing in Kubernetes.
@@ -298,12 +294,18 @@ of permissions on the filesystem?
 
 ## Appendix A: Additional Material
 
+- [Chaos Engineering - Companies, people, tools & practice](https://coggle.it/diagram/WiKceGDAwgABrmyv/t/chaos-engineering-companies%2C-people%2C-tools-practices/0a2d4968c94723e48e1256e67df51d0f4217027143924b23517832f53c536e62) (Graph)
+
 - [Principles of Chaos Engineering](http://principlesofchaos.org/)
 
 - [Chaos Engineering: Building Confidence in System Behavior through Experiments](https://www.oreilly.com/webops-perf/free/chaos-engineering.csp)
 
-- [Chaos Engineering: Why Breaking Things Should Be Practised (presentation)](https://www.slideshare.net/hornsby/chaos-engineering-why-breaking-things-should-be-practised-96719638/hornsby/chaos-engineering-why-breaking-things-should-be-practised-96719638)
+- [Chaos Engineering: Why Breaking Things Should Be Practiced (presentation)](https://www.slideshare.net/hornsby/chaos-engineering-why-breaking-things-should-be-practised-96719638/hornsby/chaos-engineering-why-breaking-things-should-be-practised-96719638)
 
 - [Lineage Driven Fault Injection (pdf)](https://people.ucsc.edu/~palvaro/molly.pdf)  - UC Berkeley
 
 - [Automating Failure Testing Research at Internet Scale (pdf)](https://people.ucsc.edu/~palvaro/socc16.pdf)
+
+- [Game Day: Achieving Resilience through Chaos Engineering](https://www.infoq.com/presentations/gameday-chaos-engineering)
+
+- [Chaos Engineering: Why the World Needs More Resilient Systems](https://www.infoq.com/presentations/chaos-engineering-resilient-systems)
