@@ -101,6 +101,25 @@ However, here are a few areas where it makes sense to invest in Chaos Engineerin
 
 ### Getting Started With Chaos Engineering
 
+#### Warning with the word Chaos
+
+"Chaos" can be a scary word because of the ideas associated with it.
+It is important to notice that the word _chaos_ is generic term for "complete disorder".
+Chaos engineering is the discipline to run experiments to expose that chaos, to make it visible.
+In our case, the chaos is in the system already.
+By exposing the inherent chaos of a system, that system is better understood
+and improvements can be made in order to make more it resilience.
+In other words, to make the chaos less affecting the availability of the system.
+
+If you see someone with a syringe and that person says to you: "I'm going to inject you with something it's going to be great".
+Would you trust that person ? Probably not.
+If you see a trained practitioner or a doctor with a syringe,
+that syringe contains a vaccine and the doctor explains to you what is it going to do to your body with the potential benefits of it.
+Would you trust that person ? Probably more than in the previous case.
+
+So it is important to mention the benefits of chaos engineering when talking about it to someone is not familiar with it.
+Talk about the results of the experiments as well as the experiments themselves.
+
 #### System requirements to endure Chaos Engineering
 
 Chaos Engineering is a fairly disruptive practice as it takes the position
