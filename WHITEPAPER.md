@@ -2,28 +2,21 @@
 
 ## What is Chaos Engineering
 
-*Chaos Engineering is the discipline of experimenting on a distributed system in order to build confidence in the system’s capability to withstand turbulent conditions in production.* - [Principles of Chaos Engineering](http://principlesofchaos.org/)
+*Chaos Engineering is the practice of injecting controlled failure into a system, application or sub-routine in an attempt to determine whether or not it will behave as expected under degraded conditions.*
+
+### History
+
+Though Chaos Engineering has been practiced for some time in large corporations, it has only recently become popular, largely due to the work of Netflix and the emergence of [Chaos Monkey](https://github.com/Netflix/chaosmonkey). Alongside Chaos Monkey, the [Principles of Chaos Engineering](https://principlesofchaos.org/) rose as an early description of the various characteristics of the practice. The practice has evolved quite a bit since the writing of the Principles of Chaos Engineering, but the document laid the foundation for the core tenets of Chaos Engineering.
 
 ### Principles
+#### Experimention
+The practice of Chaos Engineering should be performed as a form of experimentation. Each experiment should follow the scientific method and should should contain a control group or steady state, a hypothesis of behavior under duress, a failure mode which imposes duress, metric based measurements and outcomes.
 
-The Principles of Chaos Engineering describe well the various characteristics of the discipline.
+#### Blast Radius
+Practitioners should start with the smallest "blast radius" possible before increasing the effect of the failure mode. Usually this means testing on a small portion of staging traffic before moving to testing in production. Ultimately, the goal of Chaos Engineering is to ensure Production systems behave well under duress and so testing should eventually advance to live environments.
 
-The definition covers most of the main important aspects of chaos engineering:
-
-* it is a discipline rather than a process. In other words, it leans on the actors' capacity to stick to principles and make the right judgment call rather than following prescriptive rules about how they must conduct their effort. The discipline usually emerges from the actors, and their unique needs
-* while this definition is specific about distributed systems, where chaos engineering provides great benefits, chaos engineering is concerned about any system with enough complexity. It gives the actors a way of navigating this complexity to learn, with improving production as the main target of the effort. While actors could, and likely should, carry chaos engineering effort into their non-production environment, it is best to perform it in production where it matters.
-
-All of these facets are meant for actors to build confidence in their production system and feel they can become familiar with, and responsive to, its dynamic nature.
-
-#### Terminology
-
-Throughout this proposal, we will be using some terms that are fairly specific to the chaos engineering discipline:
-
-* **hypothesis**: theory that an actor has about an aspect of their system's behavior after condition variations, described in terms of a result expressed as a quantity (ie. measurement)
-* **experiment**: investigation of the hypothesis through variable measurement and observability of the system's state
-* **instrumentation**: association between a particular result with an change in the system’s condition (the method of measurement)
-* **calibration**: identification and refinement of the amount of uncertainty included in a result.
-* **observability**: capability of a system to be considered from different angles while it is being used
+#### Automation
+In a world where rapidly changing environments are the norm, it is important to work toward automating experiments so as to prevent the dreaded [Drift into Failure](https://www.amazon.com/Drift-into-Failure-Components-Understanding/dp/1409422216). By automating experiments the practioner effectively immunizes their system, application or sub-routine to a particular failure mode.
 
 ## Why practice Chaos Engineering
 
